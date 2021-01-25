@@ -25,7 +25,7 @@ class CustomProxy {
     // Check if valid
     if (proxy == null || proxy == "") {
       assert(
-      false, "Proxy string passed to CustomProxy.fromString() is invalid.");
+          false, "Proxy string passed to CustomProxy.fromString() is invalid.");
       return null;
     }
 
@@ -41,8 +41,9 @@ class CustomProxy {
 
   /// Enable the proxy
   void enable() {
-    HttpOverrides.global =
-    new CustomProxyHttpOverride.withProxy(this.toString(), allowBadCertificates: this.allowBadCertificates);
+    HttpOverrides.global = new CustomProxyHttpOverride.withProxy(
+        this.toString(),
+        allowBadCertificates: this.allowBadCertificates);
   }
 
   /// Disable the proxy
